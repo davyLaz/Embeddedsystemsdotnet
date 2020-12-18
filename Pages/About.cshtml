@@ -1,0 +1,28 @@
+﻿@page
+@model MyApp.Namespace.AboutModel
+@{
+	ViewData["Title"] = "About";
+}
+
+<form method="post">
+	<label>Output 18: </label>
+	<input type="checkbox"  asp-for="Output18"/>
+	<br>
+	<label>Output 17: </label>
+	<input type="checkbox"  asp-for="Output17"/>
+	<br>	
+
+	Input 22:
+	@if(Model.Input22)
+	{<img src="lampAan.jpg" alt="lamp Aan"/>}
+	else
+	{<img src="lampUit.jpg" alt="lamp Uit"/>}
+	<br>
+	Input 23:
+	@if(Model.Input23)
+	{<img src="lampAan.jpg" alt="lamp Aan"/>}
+	else
+	{<img src="lampUit.jpg" alt="lamp Uit"/>}
+	<br>
+	<button type="submit">Click</button>
+</form>
